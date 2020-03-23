@@ -20,6 +20,7 @@ public class DataResponse {
 	String fileUrl;
 	String reportingQuarter;
 	String errorReason;
+	//TODO dataPoints
 
 	public DataResponse(String error) {
 		this.errorReason = error;
