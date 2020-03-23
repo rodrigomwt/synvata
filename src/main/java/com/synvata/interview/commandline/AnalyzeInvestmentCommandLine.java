@@ -37,7 +37,7 @@ public class AnalyzeInvestmentCommandLine {
 	 * @param fields
 	 * @return
 	 */
-	@ShellMethod("Search for CIK, Quarter Index, Fields. Ex: 1000045 2019-02-14 Assets,Deposits")
+	@ShellMethod("Search for CIK, Quarter Index, Fields. Ex: search 1000045 2019-02-14 Assets,Deposits")
 	public DataResponse search(@ShellOption(help = "CIK Number") String cik, 
 			@ShellOption(help = "Quarter Index") String quarterIndex, 
 			@ShellOption(help = "Fields") List<String> fields) {
