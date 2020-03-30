@@ -29,7 +29,10 @@ public class DataResponse {
 
 		for(UsGaap usGaap : usGaapList) {
 
-			Map<String, Integer> insertedDataPoints = this.dataPoints.entrySet().stream().filter(x -> x.getKey().equals(usGaap.getDataPoint())).collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
+			Map<String, Integer> insertedDataPoints = this.dataPoints.entrySet()
+					.stream()
+					.filter(x -> x.getKey().equals(usGaap.getDataPoint()))
+					.collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
 
 			if(insertedDataPoints.isEmpty()) {
 				insertedDataPoints.put(usGaap.getDataPoint(), 1);
