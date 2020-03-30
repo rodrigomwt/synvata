@@ -12,9 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Xbrl {
+	
 	String cik;
 	String companyName;
 	FormType formType;
 	LocalDate dateField;
 	String fileName;
+	
 }
