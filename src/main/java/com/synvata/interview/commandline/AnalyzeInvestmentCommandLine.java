@@ -63,11 +63,9 @@ public class AnalyzeInvestmentCommandLine {
 			for(Xbrl xbrl : xbrlList) {
 				List<UsGaap> usGaapList = getData(xbrl.getFileName(), fields);
 
-				if(usGaapList.isEmpty()) {
-					System.out.println("No results found");
+				if(!usGaapList.isEmpty()) {
+					dataResponse.add(new DataResponse(xbrl.getFormType(), xbrl.getDateField(), BASE_URL + xbrl.getFileName(), usGaapList));
 				}
-
-				dataResponse.add(new DataResponse(xbrl.getFormType(), xbrl.getDateField(), BASE_URL + xbrl.getFileName(), usGaapList));
 			}
 
 			ObjectMapper mapper = new ObjectMapper();
